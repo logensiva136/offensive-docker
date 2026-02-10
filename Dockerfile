@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
 
 # Update and install base tools
-RUN apt-get update && apt-get upgrade -y && \
+RUN apt-get update && apt -y install kali-linux-headless && apt-get upgrade -y && \
     apt-get install -y \
     git \
     python3 \
@@ -35,8 +35,9 @@ RUN apt-get update && apt-get upgrade -y && \
     tcpdump \
     exploitdb \
     wordlists \
-    seclists \
-    && rm -rf /var/lib/apt/lists/*
+    seclists
+    # seclists /
+    # && rm -rf /var/lib/apt/lists/*
 
 # Install ReconFTW
 RUN git clone https://github.com/six2dez/reconftw /opt/reconftw && \
