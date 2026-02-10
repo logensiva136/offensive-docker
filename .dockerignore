@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Results and workspace
+workspace/
+results/
+
+# Documentation
+*.md
+!README.md
+
+# Scripts
+*.sh
+!build.sh
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
